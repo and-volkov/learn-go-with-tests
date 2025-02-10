@@ -1,2 +1,3 @@
 # learn-go-with-tests
-Study 
+
+Study
