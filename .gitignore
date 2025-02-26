@@ -25,3 +25,4 @@ go.work.sum
 .env
 clockface/clockface/clock.svg
 clockface/clockface/clockface
+clockface/.DS_Store
