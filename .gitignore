@@ -26,3 +26,4 @@ go.work.sum
 clockface/clockface/clock.svg
 clockface/clockface/clockface
 clockface/.DS_Store
+blogrenderer/.approval_tests_temp/.approved_files.log
