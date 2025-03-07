@@ -1,11 +1,8 @@
 package main
 
 func Sum(numbers []int) int {
-	sum := 0
-	for _, number := range numbers {
-		sum += number
-	}
-	return sum
+	add := func(x, y int) int { return x + y }
+	return Reduce(numbers, add, 0)
 }
 
 func SumAll(numbersToSum ...[]int) []int {
@@ -17,15 +14,15 @@ func SumAll(numbersToSum ...[]int) []int {
 	return sums
 }
 
-func SumAllTails(numbersToSum ...[]int) []int {
-	var sums []int
-
-	for _, numbers := range numbersToSum {
-		if len(numbers) == 0 {
-			sums = append(sums, 0)
+func SumAllTails(numbers ...[]int) []int {
+	sumTail := func(acc, x []int) []int {
+		if len(x) == 0 {
+			return append(acc, 0)
 		} else {
-			sums = append(sums, Sum(numbers[1:]))
+			tail := x[1:]
+			return append(acc, Sum(tail))
 		}
 	}
-	return sums
+
+	return Reduce(numbers, sumTail, []int{})
 }
