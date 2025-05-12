@@ -3,7 +3,7 @@ package go_specs_greet_test
 import (
 	"testing"
 
-	go_specs_greet "github.com/and-volkov/go-specs-greet"
+	go_specs_greet "github.com/and-volkov/go-specs-greet/domain/interactions"
 	"github.com/and-volkov/go-specs-greet/specifications"
 )
 
